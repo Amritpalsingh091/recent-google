@@ -89,7 +89,7 @@ public class Methods1 {
 				
 			}
 		}
-		System.out.println("\n"+"best trip "+ place[amrit]+  " is covered at speed of " + final_answer+" meter/second");
+		System.out.println("\n"+"best way is from "+ place[amrit]+  " is covered at speed of " + final_answer+" meter/second");
 		int amrit2 = 0;
 		double final_answer2=For_min();
 		for(int m=0;m<comparison.length;m++){
@@ -98,7 +98,7 @@ public class Methods1 {
 				
 			}
 		}
-		System.out.println("worst trip " + place[amrit2] + " is covered at speed of " + final_answer2+" meter/second");
+		System.out.println("worst way is from " + place[amrit2] + " is covered at speed of " + final_answer2+" meter/second");
 	}
 	
 	public double For_max()
