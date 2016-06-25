@@ -3,8 +3,11 @@ package googlePackage;
 import java.io.IOException;
 import java.net.URISyntaxException;
 import java.text.ParseException;
+import java.util.Scanner;
+
 import net.sf.json.JSONArray;
 import net.sf.json.JSONObject;
+
 import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
@@ -19,6 +22,7 @@ public class Methods1 {
 	private final HttpClient client = HttpClientBuilder.create().build();;
 	public void performSearch(final String origins, final String destinations, final String mode) throws ParseException, IOException,URISyntaxException
 	{
+		
 		
 		int divider_string1=0;
 		int divider_string2=0;
@@ -89,7 +93,7 @@ public class Methods1 {
 				
 			}
 		}
-		System.out.println("\n"+"best way is from "+ place[amrit]+  " is covered at speed of " + final_answer+" meter/second");
+		System.out.println("\n"+"best way is from "+ place[amrit]+  " is covered at speed of " + final_answer+" meter/second"); //  output
 		int amrit2 = 0;
 		double final_answer2=For_min();
 		for(int m=0;m<comparison.length;m++){
@@ -98,10 +102,10 @@ public class Methods1 {
 				
 			}
 		}
-		System.out.println("worst way is from " + place[amrit2] + " is covered at speed of " + final_answer2+" meter/second");
+		System.out.println("worst way is from " + place[amrit2] + " is covered at speed of " + final_answer2+" meter/second");   // output
 	}
 	
-	public double For_max()
+	public double For_max()    //method to find out maximum from comparison array
 	{
 		double a=comparison[0];
 		for (int k = 0; k<comparison.length;k++){
@@ -112,7 +116,7 @@ public class Methods1 {
 		}
 		return a;
 	}
-	public double For_min()
+	public double For_min()         //method to find out minimum from comparison array
 	{
 		double a=comparison[0];
 		for (int k = 0; k<comparison.length;k++){
